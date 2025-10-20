@@ -3,19 +3,27 @@
     <head>
         <title>Quick Connections</title>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/style.css" />
     </head>
     <body>
-        <header>
-            <img src="../img/seta.png" width="50" height="50">
-            <img src="../img/procura.png">
+        <header class="app-header">
+            <div class="toolbar">
+                <a href="../index.html" class="btn btn-surface" aria-label="Voltar">
+                    <img class="icon" src="../img/seta.png" alt="Voltar">
+                </a>
+            </div>
+            <img class="search-banner" src="../img/procura.png" alt="Pesquisar">
         </header>
-        <main>
-            <img src="../img/temas_pop.png">
+        <main class="stack">
+            <img class="hero" src="../img/temas_pop.png" alt="Temas populares">
         </main>
-        <footer>
-            <a href="tela_salvo.html"> 
-                <img src="../img/vid_salvos.png">  
-            </a> 
+        <footer class="bottom-nav">
+            <a class="btn" href="tela_salvo.html">
+                <img class="icon" src="../img/vid_salvos.png" alt="Vídeos salvos">
+                Salvos
+            </a>
         </footer>
     </body>
 </html>

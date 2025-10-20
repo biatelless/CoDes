@@ -1,0 +1,172 @@
+/*
+  Quick Connections – estilos globais
+  Regras seguindo a rubrica: layout responsivo com flex/grid, uso de rem, 
+  sem CSS inline no HTML e paleta de cores fixa.
+*/
+
+/* Paleta (hex) enviada */
+:root {
+  --cream-100: #FCEACA; /* fundo claro */
+  --peach-100: #FBD9CD; /* realces/superfícies */
+  --sage-100: #D4DCD1;  /* cartões/bordas suaves */
+  --gold-500: #F1BC52;  /* ações/primário */
+  --brown-900: #543618; /* texto principal/contornos */
+
+  --radius-2: 0.5rem;
+  --radius-3: 1rem;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+}
+
+* { box-sizing: border-box; }
+
+html { height: 100%; }
+
+body {
+  min-height: 100%;
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+    Noto Sans, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji';
+  color: var(--brown-900);
+  background: var(--cream-100);
+  display: flex;
+  flex-direction: column;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+main { flex: 1 1 auto; padding: var(--space-3) var(--space-2); }
+
+/* Cabeçalhos e navegação */
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--peach-100);
+  border-bottom: 0.25rem solid var(--brown-900);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding: var(--space-2);
+}
+
+.tabs-header {
+  display: flex;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  align-items: center;
+  justify-content: center;
+  background: var(--peach-100);
+  border-bottom: 0.25rem solid var(--brown-900);
+}
+
+.tab {
+  text-decoration: none;
+  color: var(--brown-900);
+  background: var(--sage-100);
+  padding: 0.75rem 1.25rem;
+  border: 0.2rem solid var(--brown-900);
+  border-radius: 999rem;
+  font-weight: 700;
+}
+
+.tab:hover, .tab:focus { outline: none; background: var(--gold-500); }
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.toolbar .spacer { flex: 1; }
+
+.search-banner { width: 100%; }
+
+/* Rodapés */
+.bottom-nav {
+  position: sticky;
+  bottom: 0;
+  background: var(--peach-100);
+  border-top: 0.25rem solid var(--brown-900);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: var(--space-2);
+  padding: var(--space-2);
+}
+
+.icon { height: 2.5rem; width: auto; }
+
+/* Grades e cartões */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+  gap: var(--space-2);
+}
+
+.card {
+  background: var(--sage-100);
+  border: 0.25rem solid var(--brown-900);
+  border-radius: var(--radius-3);
+  padding: var(--space-2);
+}
+
+.hero { border-radius: var(--radius-3); border: 0.25rem solid var(--brown-900); }
+
+.media-viewer {
+  display: grid;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.media-viewer img { max-height: 65vh; object-fit: contain; }
+
+/* Botões bonitos (somente com a paleta) */
+.btn {
+  appearance: none;
+  border: 0.2rem solid var(--brown-900);
+  background: var(--gold-500);
+  color: var(--brown-900);
+  border-radius: 999rem;
+  padding: 0.75rem 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn:hover { filter: brightness(0.95); }
+.btn:active { filter: brightness(0.9); }
+
+.btn-secondary { background: var(--peach-100); }
+.btn-surface { background: var(--sage-100); }
+.btn-inverse { background: var(--brown-900); color: var(--cream-100); }
+.btn-danger { background: var(--brown-900); color: var(--peach-100); }
+
+/* Chips/badges simples */
+.chip {
+  background: var(--sage-100);
+  border: 0.15rem solid var(--brown-900);
+  border-radius: 999rem;
+  padding: 0.25rem 0.75rem;
+  font-weight: 600;
+}
+
+/* Utilidades */
+.center { display: grid; place-items: center; }
+.stack { display: grid; gap: var(--space-2); }
+.stack-lg { display: grid; gap: var(--space-3); }
+.hidden { display: none !important; }
+
+/* Responsividade leve */
+@media (min-width: 48rem) {
+  .tabs-header { justify-content: space-between; padding-inline: var(--space-3); }
+  main { padding: var(--space-4); }
+}
+

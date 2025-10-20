@@ -3,29 +3,26 @@
     <head>
         <title>Quick Connections</title>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/style.css" />
     </head>
     <body>
-        <header>
-            <img src="../img/seta.png" width="50" height="50">
+        <header class="app-header">
+            <a class="btn btn-surface" href="tela_videos.html">
+                <img class="icon" src="../img/seta.png" alt="Voltar">
+                Voltar
+            </a>
+            <span class="chip">Vídeos salvos</span>
         </header>
-        <main>
-            <img src="../img/piano.webp" width="600" height="600">
-            Piano
-            <img src="../img/futebol.jpg" width="600" height="600">
-            Futebol
-            <a href="tela_cachorro.html"> 
-                <img src="../img/cachorro.webp" width="600" height="600">  
-                Cachorro
-            </a>             
-            <img src="../img/amazonia.jpg" width="600" height="600">
-            Amazônia
-            <img src="../img/flores.webp" width="600" height="600">
-            Flores
-            <img src="../img/cidades.webp" width="600" height="600">
-            Cidades
+        <main class="grid">
+            <figure class="card"><img src="../img/piano.webp" alt="Piano"><figcaption>Piano</figcaption></figure>
+            <figure class="card"><img src="../img/futebol.jpg" alt="Futebol"><figcaption>Futebol</figcaption></figure>
+            <a class="card" href="tela_cachorro.html"><img src="../img/cachorro.webp" alt="Cachorro"><div class="stack"><strong>Cachorro</strong></div></a>
+            <figure class="card"><img src="../img/amazonia.jpg" alt="Amazônia"><figcaption>Amazônia</figcaption></figure>
+            <figure class="card"><img src="../img/flores.webp" alt="Flores"><figcaption>Flores</figcaption></figure>
+            <figure class="card"><img src="../img/cidades.webp" alt="Cidades"><figcaption>Cidades</figcaption></figure>
         </main>
-        <footer>
-            
-        </footer>
+        <footer class="bottom-nav"></footer>
     </body>
 </html>

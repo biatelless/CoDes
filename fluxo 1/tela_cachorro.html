@@ -3,19 +3,24 @@
    <head>
        <title>Quick Connections</title>
        <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1" />
+       <link rel="stylesheet" href="../css/reset.css" />
+       <link rel="stylesheet" href="../css/style.css" />
    </head>
    <body>
-       <header>
-        <img src="../img/seta.png" width="50" height="50">
-        <img src="../img/umdedez.png" width="300" height="100">
+       <header class="app-header">
+         <a class="btn btn-surface" href="tela_salvo.html">
+           <img class="icon" src="../img/seta.png" alt="Voltar">
+           Voltar
+         </a>
+         <img class="chip" src="../img/umdedez.png" alt="Um de dez">
        </header>
-       <main>
-           <img src="../img/cachorro_banho.jpg">
+       <main class="media-viewer">
+           <img class="hero" src="../img/cachorro_banho.jpg" alt="Cachorro tomando banho">
        </main>
-       <footer>
-           <img src="../img/remover.png" width="100" height="100"> 
-	    Remover
-	    <img src="../img/compartilhar.png" width="100" height="100">
+       <footer class="bottom-nav">
+           <a class="btn btn-danger" href="#remover"><img class="icon" src="../img/remover.png" alt="Remover">Remover</a>
+           <a class="btn" href="#compartilhar"><img class="icon" src="../img/compartilhar.png" alt="Compartilhar">Compartilhar</a>
        </footer>
    </body>
 </html>
