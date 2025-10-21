@@ -1,6 +1,6 @@
 # Quick Connections
 
-Uma aplicação web de rede social moderna com interface responsiva e funcionalidades interativas **100% CSS**.
+Uma aplicação web de rede social moderna com interface responsiva e funcionalidades interativas **100% CSS** - **Versão Simplificada**.
 
 ## 🚀 Funcionalidades
 
@@ -11,11 +11,12 @@ Uma aplicação web de rede social moderna com interface responsiva e funcionali
 - **Interface responsiva**: Funciona perfeitamente em dispositivos móveis
 - **Animações CSS**: Transições suaves e efeitos visuais
 - **Interatividade pura**: Sem JavaScript, apenas CSS
+- **Interface limpa**: Elementos apenas ilustrativos, sem interações complexas
 
 ## 🛠️ Tecnologias Utilizadas
 
 - **HTML5 Semântico**: Estrutura moderna com elementos semânticos
-- **CSS3 Avançado**: Estilos responsivos, animações e interatividade
+- **CSS3 Simplificado**: Estilos responsivos e animações básicas
 - **CSS Puro**: Funcionalidades interativas sem JavaScript
 - **Design Mobile-First**: Otimizado para dispositivos móveis
 
@@ -25,8 +26,8 @@ Uma aplicação web de rede social moderna com interface responsiva e funcionali
 CoDes-4/
 ├── css/
 │   ├── reset.css          # Reset de estilos
-│   ├── style.css          # Estilos principais
-│   └── interactive.css     # Funcionalidades interativas CSS
+│   ├── style.css          # Estilos principais (simplificado)
+│   └── interactive.css     # Funcionalidades interativas CSS (básicas)
 ├── img/                   # Imagens e assets
 ├── fluxo 1/               # Fluxo de vídeos
 │   ├── tela_cachorro.html
@@ -58,36 +59,29 @@ CoDes-4/
   - `<button>` para elementos interativos
   - `<header>`, `<main>`, `<footer>` para estrutura da página
 
-### CSS Interativo (Sem JavaScript)
-- ✅ Sistema completo de funcionalidades CSS:
-  - **Animações**: Transições suaves e efeitos visuais
-  - **Estados interativos**: Hover, focus, active com feedback visual
-  - **Galeria interativa**: Seleção visual de imagens
-  - **Formulários**: Validação visual em tempo real
-  - **Navegação**: Indicadores visuais e transições
-  - **Feedback**: Estados visuais para todas as interações
-  - **Acessibilidade**: Suporte completo para navegação por teclado
+### Interface Simplificada
+- ✅ **Caixas de texto removidas**: Substituídas por placeholders ilustrativos
+- ✅ **Botões inferiores removidos**: Interface mais limpa
+- ✅ **Elementos não interativos**: Foco na apresentação visual
+- ✅ **CSS simplificado**: Reduzido de 1200+ para ~400 linhas
 
-### Funcionalidades CSS
-- 🎨 **Animações**: slideInUp, fadeInScale, pulse, shake
-- 🔍 **Estados visuais**: Hover, focus, active, selected
-- 📱 **Responsividade**: Touch feedback para dispositivos móveis
-- 💬 **Interatividade**: Botões com feedback visual e animações
-- 🖼️ **Galeria**: Seleção visual com indicadores
-- ✅ **Validação**: Estados visuais para inputs válidos/inválidos
-- 🔄 **Transições**: Suaves entre estados e páginas
-- ♿ **Acessibilidade**: Foco visível e movimento reduzido
+### CSS Interativo Simplificado
+- ✅ Funcionalidades básicas CSS:
+  - **Animações**: fadeIn, slideUp
+  - **Estados hover**: Elevação simples
+  - **Estados focus**: Contorno para acessibilidade
+  - **Galeria**: Hover básico
+  - **Responsividade**: Touch feedback
 
 ## 🚀 Como Usar
 
 1. **Abra o arquivo `index.html`** em um navegador web
 2. **Navegue pelas abas** VÍDEOS e INTERAGIR
-3. **Explore as funcionalidades**:
+3. **Explore a interface**:
    - Visualize vídeos salvos
-   - Adicione novos amigos
-   - Compartilhe conteúdo
-   - Use a galeria de mídia
-   - Interaja com botões e elementos
+   - Navegue pela galeria
+   - Veja perfis de amigos
+   - Interface apenas ilustrativa
 
 ## 📱 Compatibilidade
 
@@ -101,46 +95,40 @@ CoDes-4/
 
 O projeto utiliza:
 - **HTML5 semântico** para melhor acessibilidade
-- **CSS3 moderno** com flexbox, grid e animações
-- **CSS puro** para todas as funcionalidades interativas
+- **CSS3 simplificado** com flexbox e grid
+- **CSS puro** para funcionalidades básicas
 - **Design responsivo** mobile-first
 - **Zero JavaScript** - apenas CSS para interatividade
+- **Interface limpa** - elementos ilustrativos
 
 ## 📝 Notas Técnicas
 
 - ✅ Todos os elementos `<div>` foram substituídos por elementos semânticos apropriados
 - ✅ **JavaScript removido completamente** - funcionalidades implementadas em CSS
-- ✅ Sistema de animações CSS com keyframes
-- ✅ Estados interativos usando pseudo-classes (:hover, :focus, :active)
-- ✅ Feedback visual para todas as interações
-- ✅ Suporte completo para acessibilidade
-- ✅ Otimizado para performance e responsividade
+- ✅ **CSS simplificado** - reduzido drasticamente para melhor performance
+- ✅ **Caixas de texto removidas** - substituídas por placeholders
+- ✅ **Botões complexos removidos** - interface mais limpa
+- ✅ **Animações básicas** - apenas efeitos essenciais
+- ✅ **Zero interações complexas** - foco na apresentação visual
 
 ## 🎨 Funcionalidades CSS Implementadas
 
-### Animações
-- `slideInUp`: Entrada suave dos elementos
-- `fadeInScale`: Aparição com escala
-- `pulse`: Efeito de pulsação
-- `shake`: Animação de erro
+### Animações Básicas
+- `fadeIn`: Aparição suave
+- `slideUp`: Entrada com movimento
 
-### Estados Interativos
-- **Hover**: Elevação e mudança de cor
-- **Focus**: Contorno visível para navegação por teclado
-- **Active**: Feedback de clique com escala
-- **Selected**: Indicadores visuais de seleção
+### Estados Interativos Simples
+- **Hover**: Elevação básica
+- **Focus**: Contorno para acessibilidade
+- **Active**: Escala ao clicar
 
-### Galeria Interativa
-- Seleção visual com indicadores ✓
-- Overlay com informações
-- Animações de hover e seleção
-
-### Formulários
-- Validação visual (válido/inválido)
-- Estados de foco com contorno
-- Placeholder animado
+### Interface Limpa
+- Placeholders de texto ilustrativos
+- Botões apenas visuais
+- Galeria com hover simples
+- Navegação básica
 
 ### Responsividade
 - Touch feedback para dispositivos móveis
-- Animações otimizadas para diferentes dispositivos
+- Animações otimizadas
 - Suporte para movimento reduzido

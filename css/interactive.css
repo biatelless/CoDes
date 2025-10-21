@@ -1,436 +1,77 @@
-/* Funcionalidades Interativas CSS - Quick Connections */
+/* CSS Interativo Simplificado - Quick Connections */
 
-/* ===== ANIMAÇÕES E TRANSIÇÕES ===== */
-
-/* Animação de entrada para elementos */
-@keyframes slideInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Animações básicas */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-@keyframes fadeInScale {
-    from {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-}
-
-@keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
-    75% { transform: translateX(5px); }
-}
-
-/* Aplicar animações aos elementos */
+/* Aplicar animações */
 .container {
-    animation: slideInUp 0.6s ease-out;
+    animation: slideUp 0.5s ease-out;
 }
 
 .content-item,
 .gallery-item,
 .suggestion-item,
 .contact-item {
-    animation: fadeInScale 0.4s ease-out;
+    animation: fadeIn 0.3s ease-out;
 }
 
-/* ===== ESTADOS INTERATIVOS ===== */
+/* Estados de hover básicos */
+.btn:hover,
+.action-btn:hover,
+.gallery-item:hover,
+.content-item:hover {
+    transform: translateY(-2px);
+}
 
-/* Botões com feedback visual */
-.btn:active {
+.btn:active,
+.action-btn:active {
     transform: scale(0.95);
-    transition: transform 0.1s ease;
 }
 
-.btn:focus {
-    outline: 3px solid var(--gold);
+/* Estados de foco para acessibilidade */
+.btn:focus,
+.action-btn:focus,
+.tab-button:focus {
+    outline: 2px solid var(--gold);
     outline-offset: 2px;
 }
 
-/* Estados de like/save/share */
-.action-btn.like:active {
-    animation: pulse 0.3s ease;
-    background: linear-gradient(135deg, #ff6b6b, #ff5252);
-}
-
-.action-btn.save:active {
-    animation: pulse 0.3s ease;
-    background: linear-gradient(135deg, #4ecdc4, #26a69a);
-}
-
-.action-btn.share:active {
-    animation: pulse 0.3s ease;
-    background: linear-gradient(135deg, #ffd93d, #ffc107);
-}
-
-/* ===== GALERIA INTERATIVA ===== */
-
-/* Seleção de imagens na galeria */
+/* Galeria interativa simples */
 .gallery-item {
     cursor: pointer;
-    position: relative;
 }
 
-.gallery-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(241, 188, 82, 0);
-    border-radius: 0.8rem;
-    transition: background 0.3s ease;
-    z-index: 1;
+.gallery-item:hover .gallery-overlay {
+    transform: translateY(0);
 }
 
-.gallery-item:hover::before {
-    background: rgba(241, 188, 82, 0.1);
-}
-
-.gallery-item:active::before {
-    background: rgba(241, 188, 82, 0.3);
-}
-
-/* Indicador de seleção */
-.gallery-item::after {
-    content: '✓';
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
+/* Categorias interativas */
+.category-item:hover {
     background: var(--gold);
     color: var(--white);
-    border-radius: 50%;
-    width: 1.5rem;
-    height: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.8rem;
-    font-weight: bold;
-    opacity: 0;
-    transform: scale(0);
-    transition: all 0.3s ease;
-    z-index: 2;
 }
 
-.gallery-item:active::after {
-    opacity: 1;
-    transform: scale(1);
-}
-
-/* ===== FORMULÁRIOS INTERATIVOS ===== */
-
-/* Validação visual de inputs */
-.input-field:invalid {
-    border-color: #ff6b6b;
-    box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.2);
-}
-
-.input-field:valid {
-    border-color: #4ecdc4;
-    box-shadow: 0 0 0 2px rgba(78, 205, 196, 0.2);
-}
-
-/* Placeholder animado */
-.input-field::placeholder {
-    transition: opacity 0.3s ease;
-}
-
-.input-field:focus::placeholder {
-    opacity: 0.5;
-}
-
-/* ===== CATEGORIAS INTERATIVAS ===== */
-
-/* Seleção de categorias */
-.category-item {
-    position: relative;
-    overflow: hidden;
-}
-
-.category-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    transition: left 0.5s ease;
-}
-
-.category-item:hover::before {
-    left: 100%;
-}
-
-.category-item:active {
-    transform: scale(0.98);
-    background: linear-gradient(135deg, var(--gold), #E6A847);
-    color: var(--white);
-}
-
-/* ===== NAVEGAÇÃO INTERATIVA ===== */
-
-/* Tabs com indicador */
-.tab-button {
-    position: relative;
-}
-
-.tab-button::after {
-    content: '';
-    position: absolute;
-    bottom: -0.5rem;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background: var(--gold);
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
-}
-
-.tab-button:hover::after {
-    width: 80%;
-}
-
-.tab-button.active::after {
-    width: 100%;
-}
-
-/* ===== MODAL DE IMAGEM ===== */
-
-/* Modal overlay */
-.image-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-}
-
-.image-modal:target {
-    opacity: 1;
-    visibility: visible;
-}
-
-.modal-content {
-    position: relative;
-    max-width: 90%;
-    max-height: 90%;
-    animation: fadeInScale 0.3s ease;
-}
-
-.modal-image {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-}
-
-.modal-close {
-    position: absolute;
-    top: -1rem;
-    right: -1rem;
-    background: var(--gold);
-    color: var(--white);
-    border: none;
-    border-radius: 50%;
-    width: 2.5rem;
-    height: 2.5rem;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.modal-close:hover {
-    transform: scale(1.1);
-    background: #E6A847;
-}
-
-/* ===== FEEDBACK VISUAL ===== */
-
-/* Mensagens de feedback */
-.feedback-message {
-    position: fixed;
-    top: 2rem;
-    right: 2rem;
-    background: linear-gradient(135deg, #4ecdc4, #26a69a);
-    color: var(--white);
-    padding: 1rem 1.5rem;
-    border-radius: 1rem;
-    box-shadow: 0 8px 24px rgba(78, 205, 196, 0.3);
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
-    z-index: 1001;
-    font-weight: 600;
-}
-
-.feedback-message.show {
-    transform: translateX(0);
-}
-
-/* ===== ESTADOS DE CARREGAMENTO ===== */
-
-/* Loading spinner */
-.loading {
-    position: relative;
-    pointer-events: none;
-}
-
-.loading::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 2rem;
-    height: 2rem;
-    border: 3px solid var(--sage);
-    border-top: 3px solid var(--gold);
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-    transform: translate(-50%, -50%);
-}
-
-@keyframes spin {
-    0% { transform: translate(-50%, -50%) rotate(0deg); }
-    100% { transform: translate(-50%, -50%) rotate(360deg); }
-}
-
-/* ===== RESPONSIVIDADE INTERATIVA ===== */
-
-/* Touch feedback para dispositivos móveis */
+/* Responsividade para touch */
 @media (hover: none) and (pointer: coarse) {
     .btn:active,
     .action-btn:active,
     .gallery-item:active {
         transform: scale(0.95);
-        transition: transform 0.1s ease;
-    }
-    
-    .category-item:active {
-        background: linear-gradient(135deg, var(--gold), #E6A847);
-        color: var(--white);
     }
 }
 
-/* ===== ACESSIBILIDADE ===== */
-
-/* Foco visível para navegação por teclado */
-*:focus {
-    outline: 2px solid var(--gold);
-    outline-offset: 2px;
-}
-
-/* Reduzir animações para usuários que preferem movimento reduzido */
+/* Reduzir animações se preferido */
 @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
+    * {
         animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
-}
-
-/* ===== ESTADOS ESPECIAIS ===== */
-
-/* Elemento selecionado */
-.selected {
-    border: 3px solid var(--gold);
-    box-shadow: 0 0 0 2px var(--cream);
-    animation: pulse 0.5s ease;
-}
-
-/* Elemento desabilitado */
-.disabled {
-    opacity: 0.5;
-    pointer-events: none;
-    cursor: not-allowed;
-}
-
-/* Elemento com erro */
-.error {
-    border-color: #ff6b6b;
-    background-color: rgba(255, 107, 107, 0.1);
-    animation: shake 0.5s ease;
-}
-
-/* Elemento com sucesso */
-.success {
-    border-color: #4ecdc4;
-    background-color: rgba(78, 205, 196, 0.1);
-}
-
-/* ===== HOVER EFFECTS AVANÇADOS ===== */
-
-/* Efeito de elevação */
-.elevate-on-hover {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.elevate-on-hover:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
-}
-
-/* Efeito de brilho */
-.glow-on-hover {
-    transition: box-shadow 0.3s ease;
-}
-
-.glow-on-hover:hover {
-    box-shadow: 0 0 20px rgba(241, 188, 82, 0.4);
-}
-
-/* ===== UTILITÁRIOS INTERATIVOS ===== */
-
-/* Classe para elementos clicáveis */
-.clickable {
-    cursor: pointer;
-    user-select: none;
-    transition: all 0.3s ease;
-}
-
-.clickable:hover {
-    transform: scale(1.02);
-}
-
-.clickable:active {
-    transform: scale(0.98);
-}
-
-/* Classe para elementos que mudam de cor */
-.color-shift {
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.color-shift:hover {
-    background-color: var(--gold);
-    color: var(--white);
 }
