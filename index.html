@@ -3,23 +3,38 @@
     <head>
         <title>Quick Connections</title>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <header>
-            <a href="fluxo 1/tela_videos.html" width="350" height="150">
-                Vídeos
-            </a>  
-            <a href="fluxo 2 e 3/tela_interagir.html" width="350" height="150">
-                Interagir
-            </a>
-        </header>
-        <main>
-            <img src="img/notícia.png" width="900" height="700">
-        </main>
-        <footer>
-            <img src="img/like.jpg" alt="Like" width="150" height="150">
-            <img src="img/salvar.png" alt="Salvar" width="150" height="150">
-            <img src="img/compartilhar.png" alt="Compartilhar" width="150" height="150">
-        </footer>
+        <div class="container">
+            <header class="header">
+                <div class="tab-container">
+                    <a href="fluxo 1/tela_videos.html" class="tab-button active">VÍDEOS</a>
+                    <a href="fluxo 2 e 3/tela_interagir.html" class="tab-button">INTERAGIR</a>
+                </div>
+            </header>
+            <main class="main-content">
+                <div class="content-item">
+                    <h1>Novas leis de trânsito...</h1>
+                    <img src="img/notícia.png" alt="Ilustração sobre leis de trânsito" class="content-image">
+                </div>
+            </main>
+            <footer class="footer">
+                <div class="action-btn like">
+                    <span class="icon">❤️</span>
+                    <span>Like</span>
+                </div>
+                <div class="action-btn save">
+                    <span class="icon">💾</span>
+                    <span>Salvar</span>
+                </div>
+                <div class="action-btn share">
+                    <span class="icon">📤</span>
+                    <span>Compartilhar</span>
+                </div>
+            </footer>
+        </div>
     </body>
 </html>

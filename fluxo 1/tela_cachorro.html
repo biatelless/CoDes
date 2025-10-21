@@ -1,21 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
    <head>
-       <title>Quick Connections</title>
+       <title>Quick Connections - Vídeo do Cachorro</title>
        <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="../css/reset.css">
+       <link rel="stylesheet" href="../css/style.css">
    </head>
    <body>
-       <header>
-        <img src="../img/seta.png" width="50" height="50">
-        <img src="../img/umdedez.png" width="300" height="100">
-       </header>
-       <main>
-           <img src="../img/cachorro_banho.jpg">
-       </main>
-       <footer>
-           <img src="../img/remover.png" width="100" height="100"> 
-	    Remover
-	    <img src="../img/compartilhar.png" width="100" height="100">
-       </footer>
+       <div class="container">
+           <header class="header">
+               <a href="../index.html" class="back-button">
+                   <span class="back-arrow">←</span>
+               </a>
+               <div class="video-counter">
+                   <span class="counter-text">1 de 10 vídeos salvos</span>
+               </div>
+           </header>
+           <main class="main-content">
+               <div class="video-container">
+                   <img src="../img/cachorro_banho.jpg" alt="Cachorro no banho" class="video-image">
+               </div>
+           </main>
+           <footer class="footer">
+               <div class="action-btn like">
+                   <span class="icon">🗑️</span>
+                   <span>Remover</span>
+               </div>
+               <div class="action-btn share">
+                   <span class="icon">📤</span>
+                   <span>Compartilhar</span>
+               </div>
+           </footer>
+       </div>
    </body>
 </html>
