@@ -1,19 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
    <head>
-       <title>Quick Connections</title>
+       <title>Quick Connections - Conversas</title>
        <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="../../css/reset.css">
+       <link rel="stylesheet" href="../../css/style.css">
    </head>
    <body>
-       <header>
-        <img src="../../img/seta.png" width="50" height="50">
-       </header>
-       <main>
-           <img src="../../img/conversas.png">
-       </main>
-       <footer>
-           <a href="tela_novo_amigo.html">
-                <img src="../../img/novo_amigo.png"> 
-           </a>
-       </footer>
-    </body> 
+       <div class="container">
+           <header class="header">
+               <a href="../../index.html" class="back-button">
+                   <span class="back-arrow">←</span>
+               </a>
+           </header>
+           <main class="main-content">
+               <div class="conversation-prompt">
+                   <h2>Deseja iniciar uma conversa?</h2>
+               </div>
+               <div class="contact-input-section">
+                   <input type="text" class="input-field" placeholder="Nome completo" />
+               </div>
+               <div class="frequent-contacts">
+                   <h3>Contatos Frequentes:</h3>
+                   <div class="contact-list">
+                       <div class="contact-item">
+                           <span class="contact-name">@João Martinez</span>
+                       </div>
+                       <div class="contact-item">
+                           <span class="contact-name">@Ana Beatriz Matos</span>
+                       </div>
+                       <div class="contact-item">
+                           <span class="contact-name">@Fernanda Mendes</span>
+                       </div>
+                   </div>
+               </div>
+           </main>
+           <footer class="footer">
+               <a href="tela_novo_amigo.html" class="btn btn-primary">
+                   <span class="icon">👥</span>
+                   Novo Amigo
+               </a>
+           </footer>
+       </div>
+    </body>
+</html> 

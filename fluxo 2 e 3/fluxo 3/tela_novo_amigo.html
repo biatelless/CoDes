@@ -1,21 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
     <head>
-        <title>Quick Connections</title>
+        <title>Quick Connections - Novo Amigo</title>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../css/reset.css">
+        <link rel="stylesheet" href="../../css/style.css">
     </head>
     <body>
-        <header>
-            <img src="../../img/seta.png" width="50" height="50">
-            <a href="tela_pesquisar_amigo.html">
-                <img src = "../../img/pesquisar_amigo.png">
-            </a>  
-        </header>
-        <main>
-            <img src="../../img/sugestoes.png">
-        </main>
-        <footer>
-            <img src = "../../img/solicitacao_amigo.png"> 
-        </footer>
+        <div class="container">
+            <header class="header">
+                <a href="../../index.html" class="back-button">
+                    <span class="back-arrow">←</span>
+                </a>
+                <a href="tela_pesquisar_amigo.html" class="btn btn-primary">
+                    <span class="icon">🔍</span>
+                    Pesquisar Amigo
+                </a>
+            </header>
+            <main class="main-content">
+                <div class="suggestions-section">
+                    <h2>Sugestões</h2>
+                    <div class="suggestions-list">
+                        <div class="suggestion-item">
+                            <div class="suggestion-info">
+                                <h3>Diogo Martins</h3>
+                                <p>dos seus contatos</p>
+                            </div>
+                            <div class="btn btn-outline">Adicionar</div>
+                        </div>
+                        <div class="suggestion-item">
+                            <div class="suggestion-info">
+                                <h3>Maria Alves</h3>
+                                <p>4 amigos em comum</p>
+                            </div>
+                            <div class="btn btn-outline">Adicionar</div>
+                        </div>
+                        <div class="suggestion-item">
+                            <div class="suggestion-info">
+                                <h3>Bruna Morais</h3>
+                                <p>dos seus contatos</p>
+                            </div>
+                            <div class="btn btn-outline">Adicionar</div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="footer">
+                <div class="action-btn save">
+                    <span class="icon">📬</span>
+                    <span>Solicitações</span>
+                </div>
+            </footer>
+        </div>
     </body>
 </html>

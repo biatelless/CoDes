@@ -1,19 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
     <head>
-        <title>Quick Connections</title>
+        <title>Quick Connections - Pesquisar Amigo</title>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../css/reset.css">
+        <link rel="stylesheet" href="../../css/style.css">
     </head>
     <body>
-        <header>
-            <img src="../../img/seta.png" width="50" height="50">
-            <img src ="../../img/pesquisar_paula.png">
-
-        </header>
-        <main>
-            <a href="tela_perfil_paula.html">
-                <img src = "../../img/achar_paula.png">
-            </a>
-        </main>
+        <div class="container">
+            <header class="header">
+                <a href="../../index.html" class="back-button">
+                    <span class="back-arrow">←</span>
+                </a>
+                <div class="search-header">
+                    <h1>Pesquisar Amigo</h1>
+                </div>
+            </header>
+            <main class="main-content">
+                <div class="search-results">
+                    <div class="search-result-item">
+                        <div class="result-info">
+                            <div class="result-avatar">
+                                <span class="avatar-icon">👤</span>
+                            </div>
+                            <div class="result-details">
+                                <h3>Paula Lima</h3>
+                                <p>32 amigos</p>
+                            </div>
+                        </div>
+                        <a href="tela_perfil_paula.html" class="btn btn-primary">
+                            <span class="icon">👁️</span>
+                            Ver Perfil
+                        </a>
+                    </div>
+                </div>
+            </main>
+        </div>
     </body>
 </html>
