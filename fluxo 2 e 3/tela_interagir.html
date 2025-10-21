@@ -1,24 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
    <head>
-       <title>Quick Connections</title>
+       <title>Quick Connections - Interagir</title>
        <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="../css/reset.css">
+       <link rel="stylesheet" href="../css/style.css">
    </head>
    <body>
-       <header>
-        <img src="../img/seta.png" width="50" height="50">
-        <img src="../img/pesquisar_contato.png" width="800" height="500">
-       </header>
-       <main>
-           <img src="../img/contatos_freq.png">
-       </main>
-       <footer>
-           <a href="fluxo 3/tela_novo_contato.html">
-                <img src="../img/amizade.jpg"> 
-           </a>
-              <a href = "fluxo 2/tela_publicacao.html">
-                <img src = "../img/mais.jpg">
-              </a>
-                <img src ="../img/ver_publi.webp">
-       </footer>
-   </bod
+       <div class="container">
+           <header class="header">
+               <a href="../index.html" class="back-button">
+                   <span class="back-arrow">←</span>
+               </a>
+               <div class="search-section">
+                   <div class="search-btn">
+                       <span class="search-icon">🔍</span>
+                   </div>
+               </div>
+           </header>
+           <main class="main-content">
+               <div class="contacts-section">
+                   <h2>Contatos Frequentes</h2>
+                   <div class="contacts-list">
+                       <div class="contact-item">
+                           <div class="contact-avatar">
+                               <span class="avatar-icon">👤</span>
+                           </div>
+                           <div class="contact-info">
+                               <h3>João Martinez</h3>
+                               <p>Online agora</p>
+                           </div>
+                           <div class="contact-action-btn">
+                               <span class="icon">💬</span>
+                           </div>
+                       </div>
+                       <div class="contact-item">
+                           <div class="contact-avatar">
+                               <span class="avatar-icon">👤</span>
+                           </div>
+                           <div class="contact-info">
+                               <h3>Ana Beatriz Matos</h3>
+                               <p>Visto há 2 horas</p>
+                           </div>
+                           <div class="contact-action-btn">
+                               <span class="icon">💬</span>
+                           </div>
+                       </div>
+                       <div class="contact-item">
+                           <div class="contact-avatar">
+                               <span class="avatar-icon">👤</span>
+                           </div>
+                           <div class="contact-info">
+                               <h3>Fernanda Mendes</h3>
+                               <p>Visto há 1 dia</p>
+                           </div>
+                           <div class="contact-action-btn">
+                               <span class="icon">💬</span>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </main>
+           <footer class="footer">
+               <a href="fluxo 3/tela_novo_contato.html" class="action-btn like">
+                   <span class="icon">👥</span>
+                   <span>Amizade</span>
+               </a>
+               <a href="fluxo 2/tela_publicacao.html" class="action-btn share">
+                   <span class="icon">➕</span>
+                   <span>Mais</span>
+               </a>
+               <div class="action-btn save">
+                   <span class="icon">👁️</span>
+                   <span>Ver Publi</span>
+               </div>
+           </footer>
+       </div>
+   </body>
+</html>
