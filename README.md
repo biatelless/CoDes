@@ -26,8 +26,7 @@ Uma aplicação web de rede social moderna com interface responsiva e funcionali
 CoDes-4/
 ├── css/
 │   ├── reset.css          # Reset de estilos
-│   ├── style.css          # Estilos principais (simplificado)
-│   └── interactive.css     # Funcionalidades interativas CSS (básicas)
+│   └── style.css          # Estilos principais (simplificado)
 ├── img/                   # Imagens e assets
 ├── fluxo 1/               # Fluxo de vídeos
 │   ├── tela_cachorro.html
