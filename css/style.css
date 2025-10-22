@@ -1,5 +1,3 @@
-/* CSS Simplificado - Quick Connections */
-
 /* Reset básico */
 * {
     margin: 0;
@@ -63,6 +61,7 @@ body {
     color: var(--branco);
 }
 
+/* Efeito Hover - estilo ao passar o mouse em cima do botão */
 .botao-voltar:hover {
     transform: scale(1.1);
 }
@@ -639,7 +638,7 @@ body {
     color: var(--marrom);
 }
 
-/* Responsividade */
+/* Responsividade (modificando tamanho de tela) */
 @media (max-width: 768px) {
     .grade-conteudo {
         grid-template-columns: 1fr;
