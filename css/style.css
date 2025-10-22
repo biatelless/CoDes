@@ -284,8 +284,9 @@ body {
     background-color: var(--white);
     color: #999;
     min-height: 3rem;
-    display: flex;
-    align-items: center;
+    display: block;
+    text-align: center;
+    line-height: 3rem;
 }
 
 /* Galeria */
