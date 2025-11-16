@@ -6,34 +6,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../../css/reset.css">
         <link rel="stylesheet" href="../../css/style.css">
+        <script src="../../js/buscar-amigo.js"></script>
     </head>
     <body>
         <section class="pagina">
             <header class="cabecalho">
-                <a href="../../index.html" class="botao-voltar" onclick="history.back(); return false;">
+                <a href="tela_novo_amigo.html" class="botao-voltar" onclick="history.back(); return false;">
                     <span class="seta-voltar">←</span>
                 </a>
-                <section class="cabecalho-busca">
-                    <h1>Pesquisar Amigo</h1>
-                </section>
+                <input type="text" id="input-busca-amigo" class="input-busca" placeholder="Digite o nome do amigo..." autocomplete="off">
             </header>
             <main class="conteudo">
                 <section class="resultados-busca">
-                    <article class="item-resultado-busca">
-                        <section class="info-resultado">
-                            <figure class="avatar-resultado">
-                                <span class="icone-avatar">👤</span>
-                            </figure>
-                            <section class="detalhes-resultado">
-                                <h3>Paula Lima</h3>
-                                <p>32 amigos</p>
-                            </section>
-                        </section>
-                        <a href="tela_perfil_paula.html" class="botao botao-principal">
-                            <span class="icone">👁️</span>
-                            Ver Perfil
-                        </a>
-                    </article>
+                    <p class="texto-ajuda-busca">Digite o nome do amigo no campo acima e pressione Enter para buscar.</p>
                 </section>
             </main>
         </section>

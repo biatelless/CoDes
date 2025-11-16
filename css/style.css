@@ -853,6 +853,36 @@ body {
     font-size: 1.5rem;
 }
 
+/* Campo de input de busca */
+.input-busca {
+    flex: 1;
+    padding: var(--espaco-pequeno) var(--espaco-medio);
+    border: 2px solid var(--verde);
+    border-radius: 1.5rem;
+    font-size: 1rem;
+    background-color: var(--branco);
+    color: var(--marrom);
+    margin: 0 var(--espaco-medio);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-busca:focus {
+    border-color: var(--dourado);
+}
+
+.input-busca::placeholder {
+    color: #999;
+}
+
+/* Texto de ajuda na busca */
+.texto-ajuda-busca {
+    text-align: center;
+    color: var(--dourado);
+    font-size: 1rem;
+    padding: var(--espaco-grande);
+}
+
 /* Navegação */
 .navegacao {
     display: flex;
@@ -1032,6 +1062,13 @@ body {
 
 .botao-acao .icone {
     font-size: 1.5rem;
+}
+
+/* Botão único - ocupa mais espaço quando é o único no rodapé */
+.botao-unico {
+    min-width: 12rem;
+    padding: var(--espaco-medio) var(--espaco-grande);
+    font-size: 1.1rem;
 }
 
 /* Placeholders de texto */
@@ -1260,7 +1297,7 @@ body {
 }
 
 .detalhes-perfil p {
-    color: var(--verde);
+    color: var(--dourado);
     font-size: 1.1rem;
 }
 
